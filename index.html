@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donet.me</title>
+</head>
+
+<body>
+    <h1>Donet.me</h1>
+    <center>
+        <img src="donate_webpic.webp" alt ="Page picture" width="600" height="290">
+    </center>
+<br>
+<hr>
+
+    <center>
+    <br><br>
+    <h2>Sign Up</h2>
+        <form>
+            <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" required><br>
+            <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" required><br><br> 
+                <input type="submit" value="Submit">
+        </form>
+    </center>
+
+<center>
+  <h2>Donator Information</h2>
+</center>
+  <form action="/submit-donation" method="post">
+    
+    <center>
+      <table>
+        <tr>
+          <td>
+            <label for="firstName">First Name:</label><br>
+            <input type="text" id="firstName" name="firstName" placeholder="Juan" required>
+          </td>
+          <td>
+            <label for="lastName">Last Name:</label><br>
+            <input type="text" id="lastName" name="lastName" placeholder="Dela Cruz" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="0917-123-4567"
+                   pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" required>
+          </td>
+          <td>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" placeholder="juan@example.com" required>
+          </td>
+        </tr>
+      </table>
+      <br>
+
+    <tr>
+        <td>
+            <label for="gender">Gender:</label><br>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="nonbinary">Non-binary</option>
+                <option value="preferNotToSay">Prefer not to say</option>
+            </select>
+        </td>
+    </tr>
+    </center>
+  </form>
+    
+  <br> 
+<center>
+    <fieldset>
+        <legend>Donation Description</legend>   
+        <p>Select the type of Donation:</p>
+
+        <label for="donateCash">
+            <input type="checkbox" id="donateCash" name="donationType" value="cash"> Cash
+        </label>
+
+        <label for="donateItem">
+            <input type="checkbox" id="donateItem" name="donationType" value="item"> Item
+        </label>
+
+        <label for="donateOther">
+            <input type="checkbox" id="donateOther" name="donationType" value="other"> Other
+        </label>
+
+        <br><hr>
+        <label for="donationAmount">Amount to Donate (₱):</label><br>
+        <input type="number" id="donationAmount" name="donationAmount" 
+            placeholder="Donation Amount" min="50" max="10,000,000" required>
+    </fieldset>
+</center>
+
+<center>
+    <form action="/submit-note" method="post">
+        <fieldset>
+            <legend>Leave a Note</legend>
+            <label for="note">Your Message:</label><br>
+            <textarea id="note" name="note" rows="5" cols="50" 
+                    placeholder="Write your message here..." maxlength="300" required></textarea><br><br>
+        </fieldset>
+    </form>
+</center>
+
+<form action="/submit" method="post">
+  <p>Send Anonymously:</p>
+
+  <label>
+    <input type="radio" name="send_anonymously" value="yes" required> Yes
+  </label>
+
+  <label style="margin-left: 20px;">
+    <input type="radio" name="send_anonymously" value="no"> No
+  </label>
+
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
+
+
+
+    
+    
